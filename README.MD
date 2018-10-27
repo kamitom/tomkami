@@ -1,5 +1,5 @@
 # NPMJS練習
 
-* __npm login__
-* __npm version minor__
-* __npm publish__
+* step 1. __npm login__
+* step 2. __npm version minor__
+* step 3. __npm publish__
