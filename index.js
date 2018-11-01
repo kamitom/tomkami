@@ -7,6 +7,7 @@ module.exports.devided = function(a, b) {return a / b};
 
 module.exports.my_max = find_my_max;
 module.exports.my_min = my_min;
+module.exports.decimal_to_binary_test = DecimaltoBinaryTest;
 
 // find minimum
 function find_my_min( /*...*/ ) {
