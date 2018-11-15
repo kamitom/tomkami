@@ -1,14 +1,13 @@
 // tomkami-lib
-module.exports.add = function (a,b) { return a + b };
-
-module.exports.multiply = function(a,b) {return a * b};
-
-module.exports.devided = function(a, b) {return a / b};
+module.exports.add = function (a, b) { return a + b };
+module.exports.multiply = function (a, b) { return a * b };
+module.exports.devided = function (a, b) { return a / b };
 
 module.exports.my_max = find_my_max;
 module.exports.my_min = find_my_min;
 module.exports.decimal_to_binary_test = DecimaltoBinaryTest;
 module.exports.Sum_Them_All = SumThemAll;
+module.exports.DiscountTotalPirces = DiscountPrices;
 
 // find minimum
 function find_my_min( /*...*/ ) {
@@ -35,10 +34,14 @@ function DecimaltoBinaryTest(putNumberHere) {
         return Number(putNumberHere).toString(2);
 }
 
-function SumThemAll(/*...*/) {
-    let total = 0;
-    for (let value of arguments) {
-        total += value;
-    }
-    return total;
+
+function SumThemAll(...args) {
+    return args.reduce((a, b) => (a + b));
 }
+
+
+function DiscountPrices(discountMe, ...prices) {
+    const totalPrices = prices.reduce((a, b) => a + b);
+    return totalPrices * (1 - discountMe);
+}
+
